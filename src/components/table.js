@@ -1,25 +1,41 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import './table.css';
 
+const Table = ({ column, data }) => {
 
-const Table = ({column, data}) =>{
-
-    return(
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                    {
-                        column.map(e=> {
-                        return (<td> {e.value}</td>)
-                        })
-                    }
+    return (
+        <div style={{
+            padding: 20,
+            backgroundColor: "white",
+            borderRadius: 20,
+            width: "70%",
+            margin: 30,
+            display: 'flex',
+            justifyContent: "center",
+        }}>
+            <table style={{
+                margin: 30,
+                width: "80%"
+            }}>
+                <thead style={{
+                    margin: 30,
+                    padding: 30
+                }}>
+                    <tr style={{
+                        backgroundColor: "skyblue"
+                    }}>
+                        {
+                            column.map(e => {
+                                return (<td> {e.value}</td>)
+                            })
+                        }
                     </tr>
                 </thead>
                 <tbody>
                     {
                         data.map(e => {
                             console.log(e.verified)
-                            return(
+                            return (
                                 <tr>
                                     <td>{e.name}</td>
                                     <td>{e.screen_name}</td>
