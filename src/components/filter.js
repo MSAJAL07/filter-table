@@ -41,7 +41,12 @@ const Filter = ({conditions, setConditions}) => {
   return (
       <div>
         {
-            <FilterRow id = "a" addFilter = {addFilter} deleteFilter={deleteFilter}  />
+          conditions.map((e)=>{
+            return (
+            <FilterRow id = {e.id} addFilter = {addFilter} deleteFilter={deleteFilter}  />
+            )
+          })
+            
          
          
         }
