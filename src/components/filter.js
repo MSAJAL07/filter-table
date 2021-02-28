@@ -41,7 +41,7 @@ const Filter = ({ conditions, setConditions }) => {
   }
 
   return (
-    <div>
+    <div >
       {
         conditions.map((e) => {
           return (
@@ -51,10 +51,9 @@ const Filter = ({ conditions, setConditions }) => {
 
       }
       <button type="button" onClick={add} style={{
-        fontWeight: "bold",
         minWidth: 60,
         fontSize: 30
-      }}>+</button>
+      }}>+ Add Filter</button>
     </div>
 
   )
