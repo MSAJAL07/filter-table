@@ -8,7 +8,7 @@ const Table = ({ column, data }) => {
             padding: 20,
             backgroundColor: "white",
             borderRadius: 20,
-            width: "70%",
+            width: "80%",
             margin: 30,
             display: 'flex',
             justifyContent: "center",

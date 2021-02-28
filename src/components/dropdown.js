@@ -5,7 +5,16 @@ const Dropdown = ({ setValue, opctions }) => {
   }
   return (
     <select
-      style={{ width: 100, margin: 20 }}
+      style={{ 
+        width: 100, 
+        margin: 20,
+        height: 40,
+        width: 150,
+        borderWidth: 1,
+        borderRadius: 5,
+        backgroundColor: 'white',
+        padding: 5 
+      }}
       onChange={onChange} >
       <option value="none" selected disabled hidden />
       {opctions.map((data) => {

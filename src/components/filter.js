@@ -41,7 +41,17 @@ const Filter = ({ conditions, setConditions }) => {
   }
 
   return (
-    <div >
+    <div style={{
+      minWidth: '60%',
+      border: 10,
+      borderWidth: 0.25,
+      borderRadius: 5,
+      borderStyle: "groove",
+      padding: 30
+    }} >
+    <div style={{
+      minWidth: '60%',
+    }} >
       {
         conditions.map((e) => {
           return (
@@ -50,10 +60,20 @@ const Filter = ({ conditions, setConditions }) => {
         })
 
       }
+      <div style={{
+        marginTop: 30,
+        bottom: 10,
+        left: 30,
+      }}>
       <button type="button" onClick={add} style={{
         minWidth: 60,
-        fontSize: 30
+        fontSize: 18,
+        borderStyle: "hidden",
+        backgroundColor: "white",
+        padding: 5
       }}>+ Add Filter</button>
+    </div>
+    </div>
     </div>
 
   )

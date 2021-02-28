@@ -42,14 +42,15 @@ const FilterRow = ({ data, addFilter, deleteFilter }) => {
         <div style={{
             display: 'flex',
             justifyContent: "space-around",
-            flexWrap: "wrap"
+            flexWrap: "wrap",
+            margin: 10
         }} id={data.id}>
             <Dropdown setValue={setCond} opctions={Cond} />
             <Dropdown setValue={setColumn} opctions={Columns} />
             <Dropdown setValue={setOperator} opctions={op} />
-            <input style={{ width: 100, margin: 20 }} placeholder="value" type="text" value={value} onChange={handleValue} />
-            <button style={{ width: 100, margin: 20 }} disabled={isDisable} type="button" onClick={handleAdd}> Add </button>
-            <button style={{ width: 100, margin: 20 }} type="button" onClick={handleDelete}> Delete</button>
+            <input style={{ textAlign: "center", width: 100, margin: 20, borderWidth: 2, borderRadius: 5 }} placeholder="value" type="text" value={value} onChange={handleValue} />
+            <button style={{ width: 100, margin: 20, border: 2 }} disabled={isDisable} type="button" onClick={handleAdd}> Add </button>
+            <button style={{ width: 100, margin: 20, border: 2 }} type="button" onClick={handleDelete}> Delete</button>
         </div>
     )
 
