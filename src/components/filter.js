@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import FilterRow from "./filterRow"
 const Filter = ({ conditions, setConditions }) => {
 

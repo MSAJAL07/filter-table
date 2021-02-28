@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 const Dropdown = ({ setValue, opctions }) => {
   const onChange = (e) => {
     setValue(opctions.filter(ev => ev.key === e.target.value)[0]);
@@ -9,7 +9,6 @@ const Dropdown = ({ setValue, opctions }) => {
         width: 100, 
         margin: 20,
         height: 40,
-        width: 150,
         borderWidth: 1,
         borderRadius: 5,
         backgroundColor: 'white',

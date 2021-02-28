@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import './table.css';
 
 const Table = ({ column, data }) => {
@@ -34,7 +34,6 @@ const Table = ({ column, data }) => {
                 <tbody>
                     {
                         data.map(e => {
-                            console.log(e.verified)
                             return (
                                 <tr>
                                     <td>{e.name}</td>
