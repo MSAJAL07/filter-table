@@ -17,13 +17,14 @@ const Filter = ({conditions, setConditions}) => {
     let tmp = [];
     for( let i=0;i<conditions.length;++i){
       if( e.id !== conditions[i].id){
-        tmp.push(e);
+        tmp.push(conditions[i]);
       }
     }
     setConditions(tmp);
   }
   const add = () => {
-    let count = conditions.length;
+    let count = conditions[conditions.length-1]?.id;
+    if(!count) count = 0;
     count++;
     let obj = {
       id : count,
@@ -31,7 +32,8 @@ const Filter = ({conditions, setConditions}) => {
         id : null,
         operator : null,
         value : null
-      }
+      },
+      cond : null
     }
     let tmp = [...conditions]
     tmp.push(obj);
@@ -43,7 +45,7 @@ const Filter = ({conditions, setConditions}) => {
         {
           conditions.map((e)=>{
             return (
-            <FilterRow id = {e.id} addFilter = {addFilter} deleteFilter={deleteFilter}  />
+            <FilterRow data = {e} addFilter = {addFilter} deleteFilter={deleteFilter}  />
             )
           })
             
